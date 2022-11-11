@@ -1,4 +1,3 @@
-import { NextApiRequest } from 'next';
 import { RowDataPacket } from "mysql2"
 
 export interface ICategory extends RowDataPacket {
@@ -6,11 +5,6 @@ export interface ICategory extends RowDataPacket {
   name: string;
   title: string;
   icon: string;
-}
-export interface IJokeRequest extends  NextApiRequest {
-  body: {
-    viewed: number[] 
-  };
 }
 
 export interface IJoke extends RowDataPacket {
