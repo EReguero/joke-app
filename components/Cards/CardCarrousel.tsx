@@ -24,13 +24,14 @@ const CardLinkWrapper = (props: ICardLinkWrapper) => {
 const CardCarrousel = (props: CardCarrousel) => {
   return (
     <div className={styles.cards}>
-      {props.cards.map((card, index) => {
-        return (
-          <CardLinkWrapper key={card.id} href={props.href} name={card.name}>
-            <Card key={index} {...card} />
-          </CardLinkWrapper>
-        );
-      })}
+      {props.cards.length > 0 &&
+        props.cards.map((card, index) => {
+          return (
+            <CardLinkWrapper key={card.id} href={props.href} name={card.name}>
+              <Card key={index} {...card} />
+            </CardLinkWrapper>
+          );
+        })}
     </div>
   );
 };

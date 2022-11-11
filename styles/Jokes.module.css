@@ -1,3 +1,10 @@
 .joke{
     text-align: center;
 }
+
+
+@media (max-width: 600px) {
+  .joke {
+        margin: 0px 20px;
+  }
+}

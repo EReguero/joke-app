@@ -38,8 +38,12 @@ export default function Home(props: HomeProps) {
       >
         Get random jokes!
       </button>
-      <h2>Or select jokes of...</h2>
-      <CardCarrousel href={"/jokes"} cards={cards} />
+      {cards.length > 0 && (
+        <>
+          <h2>Or select jokes of...</h2>
+          <CardCarrousel href={"/jokes"} cards={cards} />
+        </>
+      )}
     </>
   );
 }
