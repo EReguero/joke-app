@@ -1,0 +1,12 @@
+.footer{
+    width: 100%;
+    min-height: 50px;
+    position: relative;
+    display: grid;
+    place-content: center;    
+    box-shadow: -5px 0 15px rgb(0 0 0 / 15%);}
+
+
+.footer.blackTheme{
+    background-color: rgb(21, 21, 21);
+}

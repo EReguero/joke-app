@@ -1,0 +1,47 @@
+.cards {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 10px;
+    grid-auto-flow: column;
+    padding: 25px 0px;
+    list-style: none;
+    grid-gap: 20px;
+    width: 70%;
+    grid-auto-rows: 200px;
+}
+
+.card {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    scroll-snap-align: start;
+    transition: background-position 0.2s;
+    cursor: pointer;
+    background-size: 1px 200px;
+}
+
+.card:hover{
+    background-position: 100px;
+    transform: scale(1.1);
+}
+
+.card .card-content {
+    margin: 20px 0;
+    max-width: 85%;
+}
+
+.card .container{
+    position:relative
+}
+
+@media (max-width: 900px) {
+    .cards {
+        overflow: scroll;
+        grid-auto-flow: row;
+    }
+}

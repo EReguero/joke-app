@@ -1,0 +1,28 @@
+.header{
+    width: 100%;
+    min-height: 50px;
+    display: grid;
+    place-content: center;    
+    grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+}
+
+.header.blackTheme {
+    background-color: rgb(21, 21, 21);}
+
+.gridCell1{
+    display: grid;
+        padding-left: 20px;
+    place-content: center start;
+}
+
+.gridCell2 {
+    display: grid;
+    place-content:center;
+}
+
+.gridCell3 {
+    display: grid;
+    padding-right: 20px;
+    place-content: center end;
+}
