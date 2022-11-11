@@ -4,6 +4,9 @@ import styles from "../../styles/Cards.module.css";
 import { useTheme } from "next-themes";
 import { Icon } from "@mui/material";
 
+/**
+ * Card Component
+ */
 const Card = ({ icon, title }: Card) => {
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
@@ -17,6 +20,11 @@ const Card = ({ icon, title }: Card) => {
     return null;
   }
   //
+
+  /**
+   * @description Generate a color depending of Theme
+   * @returns {color: string} Return background color
+   */
 
   const getBackgroundColor = () => {
     //Defaults values

@@ -9,6 +9,10 @@ interface ICardLinkWrapper {
   name: string;
   children: ReactNode;
 }
+/**
+ * Wrapper for Cards with link
+ */
+
 const CardLinkWrapper = (props: ICardLinkWrapper) => {
   if (props.href) {
     return <Link href={`${props.href}/${props.name}`}>{props.children}</Link>;

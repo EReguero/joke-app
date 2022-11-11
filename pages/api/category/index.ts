@@ -8,20 +8,21 @@ export default async function handler(
 ) {
   const { query: { id, name }, method, } = req
   
-  switch (method) {
-    case 'GET':
-      try {
-        const [rows] = await pool.query<ICategory[]>('SELECT * FROM categories');
-        res.status(200).json(rows);
-      } catch (err) {
-        res.status(400).send({
-          message: err,
-        });
-      }
-      break
-    default:
-      res.setHeader('Allow', ['GET'])
-      res.status(405).end(`Method ${method} Not Allowed`)
+  //Check method of request
+  if (method == 'GET') {
+    try {
+      //Get all categories
+      const [rows] = await pool.query<ICategory[]>('SELECT * FROM categories');
+      res.status(200).json(rows);
+    } catch (err) {
+      res.status(400).send({
+        message: err,
+      });
+    }
+  }else{
+    //If is not GET block request
+    res.setHeader('Allow', ['GET'])
+    res.status(405).end(`Method ${method} Not Allowed`)
   }
 
 }

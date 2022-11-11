@@ -6,6 +6,9 @@ interface SpoilerProps {
   children: React.ReactNode;
 }
 
+/**
+ * Component for hide other Elements
+ */
 const Spoiler = ({ active, children }: SpoilerProps) => {
   return (
     <div className={`${styles.spoiler}`}>

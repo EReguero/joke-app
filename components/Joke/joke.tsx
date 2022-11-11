@@ -3,6 +3,7 @@ import Spoiler from "../Spoiler/spoiler";
 import styles from "../../styles/Jokes.module.css";
 
 const Joke = ({ punchline, setup, showJoke }: Joke) => {
+  //State for control spoiler status
   const activeSpoiler = !showJoke ?? false;
 
   return (

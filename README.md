@@ -12,6 +12,7 @@ When we have docker installed and running, we need execute the next command:
 docker-compose up --build
 ```
 
-After that app and database will be running.
+If you running it in windows, its important accept shared file for create database.
+After that app and database will be running in [http://localhost:3000/](http://localhost:3000/).
 
 ## Comments

@@ -5,6 +5,8 @@ import { Tooltip } from "@mui/material";
 
 const ThemeToggler = () => {
   const { theme, setTheme } = useTheme();
+
+  //Reverse value of theme
   const reverseTheme = theme === "light" ? "dark" : "light";
 
   return (

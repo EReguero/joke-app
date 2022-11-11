@@ -38,13 +38,17 @@ a.underline{
   align-items: center;
 }
 
-.btn{
+.btn, .btn-big{
   border: 2px solid;
   background-color: transparent;
   margin: 10px;
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.btn-big{
+  padding: 20px 40px;
 }
 
 .mt-6{

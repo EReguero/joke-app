@@ -1,5 +1,6 @@
 import { createPool } from "mysql2/promise";
 
+//DB Config
 const config = {
   host: process.env.DBHOST,
   port: process.env.DBPORT,
@@ -11,6 +12,7 @@ const config = {
   queueLimit: 0,
 };
 
+//Create DB pool
 const pool = createPool(config);
 
 export { pool };

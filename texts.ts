@@ -4,9 +4,9 @@ export const buttonJokeTexts = (category : string) => {
     "dad": "Tell me!",
     "knock-knock": "Open door!",
     "programming": "Stackoverflow it!"
-
   }
+  // Overwrite object type with its own type
   type ObjectKey = keyof typeof text;
-  return text[category as ObjectKey];
+  return text[category as ObjectKey] ?? text["general"];
 }
 

@@ -11,6 +11,7 @@ export default async function handler(
 
   if (method == 'POST') {
     try {
+      //Get as much 20 random jokes of all categories that is not in repeat jokes array.
       const query =`SELECT jokes.*, categories.name as categoryName FROM jokes INNER JOIN categories ON categories.id = jokes.type ${viewed && viewed.length > 0 ? "WHERE jokes.id NOT IN ? " : ""} ORDER BY RAND() LIMIT 20`
       const [rows] = await pool.query<IJoke[]>(query, [viewed]);
       res.status(200).json(rows);
