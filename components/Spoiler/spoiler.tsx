@@ -11,7 +11,7 @@ interface SpoilerProps {
  */
 const Spoiler = ({ active, children }: SpoilerProps) => {
   return (
-    <div className={`${styles.spoiler}`}>
+    <div className={`${styles.spoiler}`} data-testid="spoiler">
       <div className={`${styles.text} ${active ? "" : styles.show}`}>
         {children}
       </div>

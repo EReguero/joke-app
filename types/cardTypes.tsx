@@ -3,6 +3,7 @@ export interface Card {
   title: string;
   name: string;
   icon?: string;
+  _onClick?: Function;
 }
 
 export interface CardCarrousel {

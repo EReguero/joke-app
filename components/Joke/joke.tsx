@@ -8,8 +8,10 @@ const Joke = ({ punchline, setup, showJoke }: Joke) => {
 
   return (
     <div className={styles.joke}>
-      <h2>{setup}</h2>
-      <Spoiler active={!activeSpoiler}>{punchline}</Spoiler>
+      <h2 data-testid={"setup-test"}>{setup}</h2>
+      <Spoiler active={!activeSpoiler} data-testid={"punchline-test"}>
+        {punchline}
+      </Spoiler>
     </div>
   );
 };

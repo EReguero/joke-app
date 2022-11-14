@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { Card } from "../../types/cardTypes";
-import styles from "../../styles/Cards.module.css";
+import styles from "./Cards.module.css";
 import { useTheme } from "next-themes";
 import { Icon } from "@mui/material";
 
 /**
  * Card Component
  */
-const Card = ({ icon, title }: Card) => {
+const Card = ({ icon, title, _onClick }: Card) => {
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
 
@@ -55,6 +55,10 @@ const Card = ({ icon, title }: Card) => {
       className={styles.card}
       style={{
         background: `#${getBackgroundColor()}`,
+      }}
+      data-testid="card"
+      onClick={() => {
+        if (_onClick) _onClick();
       }}
     >
       {icon && <Icon fontSize="large">{icon}</Icon>}

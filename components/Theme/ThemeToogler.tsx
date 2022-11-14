@@ -16,6 +16,7 @@ const ThemeToggler = () => {
           className="theme-button"
           onClick={() => setTheme(reverseTheme)}
           aria-label="Toggle Dark Mode"
+          data-testid="theme-toogler"
         >
           {theme === "light" ? <ModeNightIcon /> : <LightModeIcon />}
         </div>

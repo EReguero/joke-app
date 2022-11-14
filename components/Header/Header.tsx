@@ -20,10 +20,13 @@ const Header = ({ theme }: HeaderProps) => {
       <div className={styles.gridCell1}>
         {router.asPath !== "/" && (
           <Tooltip title={`Go home`}>
-            <Link href={`/`}>
+            <div
+              onClick={() => router.push("/")}
+              className={styles.homeRedirect}
+            >
               <KeyboardBackspaceIcon />
-              <HomeIcon />
-            </Link>
+              Go Home
+            </div>
           </Tooltip>
         )}
       </div>
